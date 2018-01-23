@@ -108,7 +108,60 @@ def day_add(name,delta):
     end_day_num = start_day_num + delta
     end_day_name = day_name(end_day_num % 7)
     return end_day_name
+   
+# based on samples provided by Leo    
+def days_in_month(name):
+    """takes a month name and returns the number of days in that month"""
+    if name == "January" or name == "March" or name == "May" or name == "July" or name == "August" or name == "October" or name == "December":
+        return 31
+    elif name == "February":
+        return 28
+    elif name == "April"  or name == "June"  or name == "November":
+        return 30
+
+def hours_in(secs):
+    return secs//3600
+
+def minutes_in(secs):
+    return secs%3600//60
+
+def seconds_in(secs):
+    return secs%3600%60
+
+def is_even(n):
+    if n%2 == 0:
+        return True
+    else:
+        return False
     
+def is_odd(n):
+    if is_even(n):
+        return False
+    else:
+        return True
+#3   if n%2 == 0:
+#      return False
+#    else:
+#        return True
+
+def is_factor(f,n):
+    if n%f == 0:
+        return True
+    else:
+        return False
+
+def is_multiple(a,b):
+    return is_factor(b,a)
     
-  
-test_suite()        # Here is the call to run the tests
+def f2c(t):
+    return round((t-32)/1.8,0)
+
+def c2f(tc):
+    return round((tc*1.8+32), 0)
+    #if a%b == 0:
+     #   return True
+    #else:
+     #   return False
+     
+
+test_suite()
