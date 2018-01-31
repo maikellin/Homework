@@ -19,5 +19,10 @@ prefixes = "JKLMNOPQ"
 suffix = "ack"
 
 for letter in prefixes:
-    while letter == prefixes [5] or letter == prefixes[7]:
-        print(letter + "u" + suffix)
+    if letter =="O" or letter == "Q":
+        print(letter +"u" + suffix)
+    else:
+        print (letter + suffix)
+#for letter in prefixes:
+    #while letter == prefixes [5] or letter == prefixes[7]:
+        #print(letter + "u" + suffix)
